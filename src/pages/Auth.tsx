@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Building, ArrowLeft } from "lucide-react";
+import chietaLogo from "@/assets/chieta-logo.jpeg";
 import { Link, useNavigate } from "react-router-dom";
 
 const Auth = () => {
@@ -78,21 +79,17 @@ const Auth = () => {
   return (
     <div className="min-h-screen bg-gradient-hero flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        {/* Back to home button */}
-        <Link 
-          to="/" 
-          className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
-        >
-          <ArrowLeft className="h-4 w-4 mr-2" />
-          Back to Home
-        </Link>
+        {/* Removed Back to Home button since landing page is gone */}
 
         <Card className="bg-white/95 backdrop-blur-sm shadow-custom-xl animate-scale-in">
           <CardHeader className="text-center">
             <div className="flex justify-center mb-4">
-              <div className="bg-gradient-primary p-3 rounded-lg animate-bounce-in">
-                <Building className="h-8 w-8 text-primary-foreground" />
-              </div>
+              <img
+                src={chietaLogo}
+                alt="Chieta Logo"
+                className="h-16 w-auto mx-auto animate-bounce-in"
+                style={{ maxHeight: 64 }}
+              />
             </div>
             <CardTitle className="text-2xl font-bold text-primary animate-fade-in">
               {isLogin ? "Welcome Back" : "Create Account"}

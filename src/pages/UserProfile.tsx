@@ -1,3 +1,4 @@
+import chietaLogo from "@/assets/chieta-logo.jpeg";
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -139,20 +140,14 @@ const UserProfile = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-4">
+              <img src={chietaLogo} alt="Chieta Logo" className="h-8 sm:h-10 w-auto mr-4" style={{ maxHeight: 40 }} />
               <Link 
                 to={dashboardPath}
                 className="flex items-center text-muted-foreground hover:text-primary transition-colors"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Dashboard
+                Dashboard
               </Link>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <div>
-                <h1 className="text-xl font-bold text-primary">User Profile</h1>
-                <p className="text-sm text-muted-foreground">{profileData.name}</p>
-              </div>
             </div>
           </div>
         </div>

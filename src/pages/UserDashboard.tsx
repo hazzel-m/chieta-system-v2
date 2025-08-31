@@ -14,7 +14,7 @@ import { CheckInModal } from "@/components/dashboard/CheckInModal";
 import { Footer } from "@/components/ui/footer";
 import { useToast } from "@/hooks/use-toast";
 import { downloadCSV, prepareBookingHistoryData } from "@/utils/csvExport";
-import chietaLogo from "@/assets/chieta-logo.png";
+import chietaLogo from "@/assets/chieta-logo.jpeg";
 import { 
   Calendar, 
   MapPin, 
@@ -608,9 +608,9 @@ const UserDashboard = () => {
                   Interactive floor plan and available desks
                 </p>
               </CardHeader>
-              <CardContent>
+              {/* <CardContent>
                 <FloorPlan onDeskClick={handleDeskCardClick} userBookings={userBookings} />
-              </CardContent>
+              </CardContent> */}
             </Card>
 
             {/* Desk Cards for Open Floor */}
